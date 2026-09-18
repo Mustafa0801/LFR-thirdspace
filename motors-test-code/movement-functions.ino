@@ -46,6 +46,8 @@ void right(int _speed){
 
   digitalWrite(lb, LOW);
   digitalWrite(rb, HIGH);
+
+  Serial.println("right");
 }
 
 void rightTurn(int _speed){
@@ -57,6 +59,8 @@ void rightTurn(int _speed){
 
   digitalWrite(lb, LOW);
   digitalWrite(rb, HIGH);
+
+  Serial.println("right turn");
 }
 
 void left(int _speed){
@@ -68,6 +72,8 @@ void left(int _speed){
 
   digitalWrite(lb, HIGH);
   digitalWrite(rb, LOW);
+
+  Serial.println("left");
 }
 
 void leftTurn(int _speed){
@@ -79,6 +85,8 @@ void leftTurn(int _speed){
 
   digitalWrite(lb, HIGH);
   digitalWrite(rb, LOW);
+
+  Serial.println("left turn");
 }
 
 
