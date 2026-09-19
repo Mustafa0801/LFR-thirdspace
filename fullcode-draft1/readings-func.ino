@@ -26,6 +26,7 @@ int ReadSensors(){
   Serial.print(String(_reading)+" ");
   
   if (_reading == 0) _error = 4;
-
+   
+  Serial.print("linePos: "+String(_error));
   return _error;
 }
