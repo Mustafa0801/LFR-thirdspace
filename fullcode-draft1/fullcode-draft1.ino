@@ -20,7 +20,7 @@ void setup() {
   pinMode(motorLeft, OUTPUT);
   pinMode(motorRight, INPUT);
   pinMode(lf, OUTPUT);
-  pinMode(lb, OUTPUT);
+  pinMode(lb, OUTPUT);    
   pinMode(rf, OUTPUT);
   pinMode(rb, OUTPUT);
 
@@ -34,25 +34,25 @@ void setup() {
 }
 
 void loop() {
-  linePos = ReadSensors();
+  linePos = ReadSensors();  // reads all sensors, prints in serial, and stores line position
 
-  switch (linePos){
-    case -4: 
-      leftTurn(speed);
+  switch (linePos){     // checks line position to decide movement of robot
+    case -4:            
+      leftTurn(speed);  // if line is far left then robot needs to turn sharply left
       break;
     case -2:
-      left(speed);
+      left(speed);      // line is slightly left so robot needs to move left slightly
       break;
     case 0:
-      forward(speed);
+      forward(speed);   // line is infront so robot needs to move forward
       break;
     case 2:
-      right(speed);
+      right(speed);     // line slightly right, robot needs to move slightly right
       break;
     case 4:
-      rightTurn(speed);
+      rightTurn(speed); // line far right, robot needs to turn sharply right
       break;
   }
 
-  Serial.println();
+  Serial.println();   // goes to next line in serial
 }
