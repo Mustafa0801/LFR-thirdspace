@@ -13,6 +13,8 @@
 #define irR1 11
 #define irR2 12
 
+int speed = 100;
+int linePos;
 
 void setup() {
   pinMode(motorLeft, OUTPUT);
@@ -32,6 +34,25 @@ void setup() {
 }
 
 void loop() {
-  
-  
+  linePos = ReadSensors();
+
+  switch (linePos){
+    case -4: 
+      leftTurn(speed);
+      break;
+    case -2:
+      left(speed);
+      break;
+    case 0:
+      forward(speed);
+      break;
+    case 2:
+      right(speed);
+      break;
+    case 4:
+      rightTurn(speed);
+      break;
+  }
+
+  Serial.println();
 }
