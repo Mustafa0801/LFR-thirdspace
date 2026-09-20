@@ -15,8 +15,13 @@ int rightSpeed;
 
 float error;
 float previousError = 0;
+
 unsigned long _currentTime;   // variables used to calculate delta time
 unsigned long _lastTime;
+
+float Kp = 20.0;
+float Ki = 0.1;   // constants used to calculate PID, have to be adjusted and finetuned after testing
+float Kd = 5.0;
 
 void setup() {
   pinMode(irL2, INPUT);
