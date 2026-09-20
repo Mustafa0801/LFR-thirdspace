@@ -1,4 +1,4 @@
-//  SIMILAR TO ORIGINAL SENSOR READING HOWEVER IT CALCULATES ERROR DIFFERENTLY
+//  SIMILAR TO ORIGINAL SENSOR READING FUNCTION HOWEVER IT CALCULATES ERROR DIFFERENTLY
 
 // NOTE: for now digital sensors being used but analog sensors could improve the smoothness of robot
 
@@ -13,10 +13,10 @@ float ReadSensors(){
   Serial.print(String(readingM)+" ");
 
   int readingR1 = digitalRead(irR1);
-  Serial.print(String(irR1)+" ");
+  Serial.print(String(readingR1)+" ");
 
   int readingR2 = digitalRead(irR2);
-  Serial.print(String(irR2)+" ");
+  Serial.print(String(readingR2)+" ");
 
   // the algorithm calculates error using weighted position algorithm
   // e.g if robot is on the line then readings will be "1 1 0 1 1" , _robotPos=2.0 so _error=0
