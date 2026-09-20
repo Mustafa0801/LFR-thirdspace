@@ -4,7 +4,10 @@ float Calculate_dt(){
   _currentTime = millis();
   float _dt = (_currentTime - _lastTime) / 1000.0;
   _lastTime = _currentTime;
-  Serial.print(" | dt is: "+String(_dt));
+  Serial.print("dt is: "+String(_dt));
+  if (_dt == 0){
+    _dt = 0.1;    // sets a value for delta time if it is calculated as zero, since the first time loop runs dt will be zero
+  }
   return _dt;
 }
 
