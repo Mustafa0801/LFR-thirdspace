@@ -22,4 +22,5 @@ void loop() {
                 //     maybe also control its direction i.e moving backwards along the line it just followed (for this either more sensors or full U turn)
                 //  2. Have control over speed of motor?
                 //  3. have auto speed adjustment for sharp turns maybe
+                //  4. PID algorithm *very important*
                     
