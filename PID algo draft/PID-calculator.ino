@@ -9,11 +9,13 @@ float Calculate_dt(){
 
 //  FUNCTION FOR CALCULATING PID
 
-float CalculatePID(float _error){
+float CalculatePID(){
   float dt = Calculate_dt();
-  float _integral = _integral + _error*dt;
-  float _derivative = (_error - previousError) / dt;
+  float _integral = _integral + error*dt;
+  float _derivative = (error - previousError) / dt;
   
-  previousError = _error;
+  previousError = error;
  
+  float _output = (Kp * error) + (Ki * _integral) + (Kd * _derivative);
+  return _output;
 }
