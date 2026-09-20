@@ -9,9 +9,9 @@
 #define irR1 11
 #define irR2 12
 
-int baseSpeed = 150;
-int leftSpeed;
-int rightSpeed;
+float baseSpeed = 150.0;    // movement functions will need to take float as parameter instead of integer like before
+float leftSpeed;            // also they will need to take 2 parameters for 
+float rightSpeed;
 
 float error;
 float previousError = 0;
@@ -34,6 +34,14 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  error = ReadSensors();
+  float outputPID = CalculatePID();
 
+  leftSpeed = baseSpeed - outputPID; // adjusts speed of left and right motors according to PID output
+  rightSpeed = baseSpeed + outputPID;
+
+  // movement functions, called according to error like before 
+  // however selection statement will need to be changed to account for the range of error values instead of 5 set line posititon values
+
+  Serial.println();
 }
