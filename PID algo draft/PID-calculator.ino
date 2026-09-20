@@ -17,5 +17,6 @@ float CalculatePID(){
   previousError = error;
  
   float _output = (Kp * error) + (Ki * _integral) + (Kd * _derivative);
+  Serial.print(" | PID output is: "+String(_output));
   return _output;
 }
