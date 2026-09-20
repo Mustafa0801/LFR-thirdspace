@@ -11,9 +11,9 @@ void stop() {
   Serial.println("stopped");
 }
 
-void forward(int _speed) {
-  analogWrite(motor1, _speed);
-  analogWrite(motor2, _speed);
+void forward(int _speedL, int _speedR) {
+  analogWrite(motor1, _speedL);
+  analogWrite(motor2, _speedR);
 
   digitalWrite(lf, HIGH);
   digitalWrite(rf, HIGH); // sets only forward motors to HIGH so that car moves forward
@@ -24,9 +24,9 @@ void forward(int _speed) {
   Serial.println("forward");
 }
 
-void reverse(int _speed) {
-  analogWrite(motor1, _speed);
-  analogWrite(motor2, _speed);
+void reverse(int _speedL, int _speedR) {
+  analogWrite(motor1, _speedL);
+  analogWrite(motor2, _speedR);
 
   digitalWrite(lf, LOW);
   digitalWrite(rf, LOW);  // sets only back motors to HIGH so that car moves backward
@@ -37,8 +37,8 @@ void reverse(int _speed) {
   Serial.println("reverse");
 }
 
-void right(int _speed){
-  analogWrite(motor1, _speed);
+void right(int _speedL, int _speedR){
+  analogWrite(motor1, _speedL);
   digitalWrite(motor2, LOW);
 
   digitalWrite(lf,HIGH);
@@ -50,9 +50,9 @@ void right(int _speed){
   Serial.println("right");
 }
 
-void rightTurn(int _speed){
-  analogWrite(motor1, _speed);
-  analogWrite(motor2, _speed);
+void rightTurn(int _speedL, int _speedR){
+  analogWrite(motor1, _speedL);
+  analogWrite(motor2, _speedR);
 
   digitalWrite(lf, HIGH);
   digitalWrite(rf, LOW);    // car turns right on a point
@@ -63,8 +63,8 @@ void rightTurn(int _speed){
   Serial.println("right turn");
 }
 
-void left(int _speed){
-  analogWrite(motor1, _speed);
+void left(int _speedL, int _speedR){
+  analogWrite(motor1, _speedL);
   digitalWrite(motor2, LOW);
 
   digitalWrite(lf, LOW);
@@ -76,9 +76,9 @@ void left(int _speed){
   Serial.println("left");
 }
 
-void leftTurn(int _speed){
-  analogWrite(motor1, _speed);
-  analogWrite(motor2, _speed);
+void leftTurn(int _speedL, int _speedR){
+  analogWrite(motor1, _speedL);
+  analogWrite(motor2, _speedR);
 
   digitalWrite(lf, LOW);
   digitalWrite(rf, HIGH);   // car turns left on a point
