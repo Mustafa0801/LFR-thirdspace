@@ -14,7 +14,9 @@ int leftSpeed;
 int rightSpeed;
 
 float error;
-
+float previousError = 0;
+unsigned long _currentTime;   // variables used to calculate delta time
+unsigned long _lastTime;
 
 void setup() {
   pinMode(irL2, INPUT);
