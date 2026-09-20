@@ -24,6 +24,6 @@ float ReadSensors(){
   float _robotPos = (readingL2*0 + readingL1*1 + readingM*2 + readingR1*3 + readingR2*4) / (readingL2 + readingL1 + readingM + readingR1 + readingR2);
   float _normalPos = 2.0;
   float _error = _robotPos - _normalPos;
-  Serial.print(" | Error is: " String(_error));
+  Serial.print(" | Error is: "+String(_error));
   return _error;
 }
