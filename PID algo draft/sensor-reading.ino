@@ -16,7 +16,7 @@ float ReadSensors(){
   Serial.print(String(irR1)+" ");
 
   int readingR2 = digitalRead(irR2);
-  Serial.print(String(irR2));
+  Serial.print(String(irR2)+" ");
 
   // the algorithm calculates error using weighted position algorithm
   // e.g if robot is on the line then readings will be "1 1 0 1 1" , _robotPos=2.0 so _error=0
@@ -24,5 +24,6 @@ float ReadSensors(){
   float _robotPos = (readingL2*0 + readingL1*1 + readingM*2 + readingR1*3 + readingR2*4) / (readingL2 + readingL1 + readingM + readingR1 + readingR2);
   float _normalPos = 2.0;
   float _error = _robotPos - _normalPos;
+  Serial.print(" | Error is: " String(_error));
   return _error;
 }
