@@ -4,6 +4,7 @@ float Calculate_dt(){
   _currentTime = millis();
   float _dt = (_currentTime - _lastTime) / 1000.0;
   _lastTime = _currentTime;
+  Serial.print(" | dt is: "+String(_dt));
   return _dt;
 }
 
