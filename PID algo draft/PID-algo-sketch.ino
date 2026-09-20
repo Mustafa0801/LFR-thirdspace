@@ -36,9 +36,12 @@ void setup() {
 void loop() {
   error = ReadSensors();
   float outputPID = CalculatePID();
+  
+  Serial.println();
 
   leftSpeed = baseSpeed - outputPID; // adjusts speed of left and right motors according to PID output
   rightSpeed = baseSpeed + outputPID;
+  Serial.print("left motor speed is: "+String(leftSpeed)+" | right motor speed is: "+String(rightSpeed));
 
   // movement functions, called according to error like before 
   // however selection statement will need to be changed to account for the range of error values instead of 5 set line posititon values
