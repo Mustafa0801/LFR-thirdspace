@@ -19,9 +19,9 @@ float previousError = 0;
 unsigned long _currentTime;   // variables used to calculate delta time
 unsigned long _lastTime;
 
-float Kp = 20.0;
+float Kp = 10.0;
 float Ki = 0.1;   // constants used to calculate PID, have to be adjusted and finetuned after testing
-float Kd = 5.0;
+float Kd = 2.0;
 
 void setup() {
   pinMode(irL2, INPUT);
@@ -57,10 +57,31 @@ void loop() {
   else if (rightSpeed < 0.0){
     rightSpeed = 0.0;
   }
-  Serial.print("left motor speed is: "+String(leftSpeed)+" | right motor speed is: "+String(rightSpeed));
+  Serial.println("left motor speed is: "+String(leftSpeed)+" | right motor speed is: "+String(rightSpeed));
 
-  // movement functions, called according to error like before 
-  // however selection statement will need to be changed to account for the range of error values instead of 5 set line posititon values
+  //  movement functions, called according to error like before 
+  //  however selection statement will need to be changed to account for the range of error values instead of 5 set line posititon values
+  if (error == 0){
+    // forward moving function
+    Serial.print("forward");
+  }
+  else if (error>0 && error<=2){  // line is slightly left
+    // left moving function
+    Serial.print("left");
+  }
+  else if (error>2 && error<=4){  // line is sharp left
+    // left turning function
+    Serial.print("left point turn"); 
+  }
+  else if (error<0 && error>=-2){  // line is slightly right
+    // right moving function
+    Serial.print("right");
+  }
+  else if (error<-2 && error>=-4){  // line is sharply right
+    // right turning function
+    Serial.print("right point turn");
+  }
+
 
   Serial.println();
   Serial.println(); // leaves blank line in between
