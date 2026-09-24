@@ -13,7 +13,8 @@
 #define irR1 11
 #define irR2 12
 
-int speed = 100;
+int leftSpeed = 100;  // placeholder values for speeds
+int rightSpeed = 100;
 int linePos;
 
 void setup() {
@@ -38,19 +39,19 @@ void loop() {
 
   switch (linePos){     // checks line position to decide movement of robot
     case -4:            
-      leftTurn(speed);  // if line is far left then robot needs to turn sharply left
+      leftTurn(leftSpeed, rightSpeed);  // if line is far left then robot needs to turn sharply left
       break;
     case -2:
-      left(speed);      // line is slightly left so robot needs to move left slightly
+      left(leftSpeed, rightSpeed);      // line is slightly left so robot needs to move left slightly
       break;
     case 0:
-      forward(speed);   // line is infront so robot needs to move forward
+      forward(leftSpeed, rightSpeed);   // line is infront so robot needs to move forward
       break;
     case 2:
-      right(speed);     // line slightly right, robot needs to move slightly right
+      right(leftSpeed, rightSpeed);     // line slightly right, robot needs to move slightly right
       break;
     case 4:
-      rightTurn(speed); // line far right, robot needs to turn sharply right
+      rightTurn(leftSpeed, rightSpeed); // line far right, robot needs to turn sharply right
       break;
   }
 
