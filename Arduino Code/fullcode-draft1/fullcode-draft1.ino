@@ -7,11 +7,11 @@
 #define rf 7
 #define rb 6
 
-#define irL2 8   // declaring pin numbers for sensor array
-#define irL1 9
+#define irL2 12  // declaring pin numbers for sensor array
+#define irL1 11
 #define irM 10
-#define irR1 11
-#define irR2 12
+#define irR1 9
+#define irR2 8
 
 int leftSpeed = 100;  // placeholder values for speeds
 int rightSpeed = 100;
