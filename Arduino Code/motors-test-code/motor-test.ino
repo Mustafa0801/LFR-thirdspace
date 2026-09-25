@@ -7,6 +7,7 @@
 
 int leftSpeed = 150; // placeholder value for speeds 
 int rightSpeed = 150;
+int wait = 500;
 
 void setup() {
   // put your setup code here, to run once:
@@ -24,40 +25,40 @@ void loop() {
   // This is all a movement loop which tests each function one by one with short delays in between, 
   // i.e car moves in certain direction then stops, then moves
 
-  delay(1000);
+  delay(wait);
   forward(leftSpeed, rightSpeed);  // car moves forward after 1 second delay
 
-  delay(1500);
+  delay(wait);
   stop();   // 1.5 second later car stops
 
-  delay(1000);
+  delay(wait);
   right(leftSpeed, rightSpeed); // 1 second later car moves right
 
-  delay(1000);
+  delay(wait);
   stop(); 
 
-  delay(1000);
+  delay(wait);
   rightTurn(leftSpeed, rightSpeed); // car turns right
 
-  delay(1000);
+  delay(wait);
   stop();
   
-  delay(1000);
+  delay(wait);
   reverse(leftSpeed, rightSpeed);  //  car reverses
 
-  delay(1500);
+  delay(wait);
   stop(); // 1.5 second later car stops again
 
-  delay(1000);
+  delay(wait);
   left(leftSpeed, rightSpeed);  // car moves left
 
-  delay(1000);
+  delay(wait);
   stop();  
 
-  delay(1000);
+  delay(wait);
   leftTurn(leftSpeed, rightSpeed);  // car turns left
 
-  delay(1000);
+  delay(wait);
   stop();
   
 }
