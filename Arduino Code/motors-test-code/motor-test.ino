@@ -5,9 +5,9 @@
   // #define rf 7 // front-right wheel
 #define rb 4 // right wheel
 
-int leftSpeed = 150; // placeholder value for speeds 
-int rightSpeed = 150;
-int wait = 500;
+int leftSpeed = 100; // placeholder value for speeds 
+int rightSpeed = 100;
+int wait = 1500;
 
 void setup() {
   // put your setup code here, to run once:
@@ -31,34 +31,34 @@ void loop() {
   delay(wait);
   stop();   // 1.5 second later car stops
 
-  delay(wait);
-  right(leftSpeed, rightSpeed); // 1 second later car moves right
+  // delay(wait);
+  // right(leftSpeed, rightSpeed); // 1 second later car moves right
 
-  delay(wait);
-  stop(); 
+  //delay(wait);
+  // stop(); 
 
-  delay(wait);
-  rightTurn(leftSpeed, rightSpeed); // car turns right
+  //delay(wait);
+  // rightTurn(leftSpeed, rightSpeed); // car turns right
 
-  delay(wait);
-  stop();
+  //delay(wait);
+  //stop();
   
-  delay(wait);
+  //delay(wait);
   // reverse(leftSpeed, rightSpeed);  //  car reverses
 
-  delay(wait);
-  stop(); // 1.5 second later car stops again
+  //delay(wait);
+  //stop(); // 1.5 second later car stops again
 
-  delay(wait);
-  left(leftSpeed, rightSpeed);  // car moves left
+  //delay(wait);
+  // left(leftSpeed, rightSpeed);  // car moves left
 
-  delay(wait);
-  stop();  
+  //delay(wait);
+  // stop();  
 
-  delay(wait);
-  leftTurn(leftSpeed, rightSpeed);  // car turns left
+  //delay(wait);
+  // leftTurn(leftSpeed, rightSpeed);  // car turns left
 
-  delay(wait);
-  stop();
+  //delay(wait);
+  //stop();
   
 }
