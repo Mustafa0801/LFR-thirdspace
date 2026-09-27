@@ -76,19 +76,19 @@ void loop() {
   Serial.print(" | left speed: "+String(leftSpeed)+" right speed: "+String(rightSpeed));
 
   // moving according to error
-  if (error = 0){
+  if (error == 0){
     Forward(leftSpeed, rightSpeed);
   }
-  else if (error > 0 && error <= 1){    // line slightly left of robot
+  else if (error > 0 && error <= 1.0){    // line slightly left of robot
     MoveRight(leftSpeed, rightSpeed);
   }
-  else if (error > 1 && error <= 2){    // for sharp left turns
+  else if (error > 1.0 && error <= 2.0){    // for sharp left turns
     TurnRight(leftSpeed, rightSpeed);
   }
-  else if (error < 0 && error >= -1){   // line slightly right of robot
+  else if (error < 0 && error >= -1.0){   // line slightly right of robot
     MoveLeft(leftSpeed, rightSpeed);
   }
-  else if (error < -1 && error >= -2){  // for sharp right turns
+  else if (error < -1.0 && error >= -2.0){  // for sharp right turns
     TurnLeft(leftSpeed, rightSpeed);
   }
 
