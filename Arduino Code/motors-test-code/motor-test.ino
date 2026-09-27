@@ -1,9 +1,9 @@
-#define motor1 3 // left engine
-#define motor2 5 // right engine
-#define lf 2 // front-left wheel
-#define lb 4 // back-left wheel
-#define rf 7 // front-right wheel
-#define rb 6 // back-right wheel
+#define motor1 5 // left engine
+#define motor2 3 // right engine
+  // #define lf 2 // front-left wheel
+#define lb 6 // left wheel
+  // #define rf 7 // front-right wheel
+#define rb 4 // right wheel
 
 int leftSpeed = 150; // placeholder value for speeds 
 int rightSpeed = 150;
@@ -13,9 +13,9 @@ void setup() {
   // put your setup code here, to run once:
   pinMode(motor1, OUTPUT);
   pinMode(motor2, OUTPUT);
-  pinMode(lf, OUTPUT);
+    // pinMode(lf, OUTPUT);
   pinMode(lb, OUTPUT);
-  pinMode(rf, OUTPUT);
+    // pinMode(rf, OUTPUT);
   pinMode(rb, OUTPUT);
   Serial.begin(9600);
 }
@@ -44,7 +44,7 @@ void loop() {
   stop();
   
   delay(wait);
-  reverse(leftSpeed, rightSpeed);  //  car reverses
+  // reverse(leftSpeed, rightSpeed);  //  car reverses
 
   delay(wait);
   stop(); // 1.5 second later car stops again
