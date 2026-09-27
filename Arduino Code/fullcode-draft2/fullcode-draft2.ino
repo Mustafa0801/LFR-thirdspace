@@ -51,6 +51,7 @@ void setup() {
 void loop() {
   error = ReadSensors();
   float output = CalculatePID(error);
+  Serial.println();
 
   leftSpeed = baseSpeed - output;
   rightSpeed = baseSpeed + output;  // speed is adjusted to allow robot to move smoothly and accurately
@@ -72,4 +73,23 @@ void loop() {
   leftSpeed = round(leftSpeed);     // converting speeds from float to int since the movement functions need integer value for speed
   rightSpeed = round(rightSpeed);
   Serial.print(" | left speed: "+String(leftSpeed)+" right speed: "+String(rightSpeed));
+
+  // moving according to error
+  if (error = 0){
+    Forward(leftSpeed, rightSpeed);
+  }
+  else if (error > 0 && error <= 2){
+    MoveLeft(leftSpeed, rightSpeed);
+  }
+  else if (error > 2 && error <= 4){
+    TurnLeft(leftSpeed, rightSpeed);
+  }
+  else if (error < 0 && error >= -2){
+    MoveRight(leftSpeed, rightSpeed);
+  }
+  else if (error < -2 && error >= -4){
+    TurnRight(leftSpeed, rightSpeed);
+  }
+
+  Serial.println();
 }
