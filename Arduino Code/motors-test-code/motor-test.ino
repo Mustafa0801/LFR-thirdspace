@@ -5,8 +5,8 @@
   // #define rf 7 // front-right wheel
 #define rb 4 // right wheel
 
-int leftSpeed = 10; // placeholder value for speeds 
-int rightSpeed = 10;
+int leftSpeed = 200; // placeholder value for speeds 
+int rightSpeed = 200;
 int wait = 1500;
 
 void setup() {
