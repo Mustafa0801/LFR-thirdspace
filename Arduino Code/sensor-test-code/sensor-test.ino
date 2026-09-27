@@ -1,5 +1,5 @@
-#define ir_L2 4  // left most sensor
-#define ir_L1 8  // left middle sensor
+#define ir_L2 8  // left most sensor
+#define ir_L1 9  // left middle sensor
 #define ir_M 10  // middle sensor
 #define ir_R1 11 // right middle sensor
 #define ir_R2 12 // right most sensor
