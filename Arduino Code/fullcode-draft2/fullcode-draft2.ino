@@ -50,5 +50,8 @@ void setup() {
 
 void loop() {
   error = ReadSensors();
+  float output = CalculatePID(error);
 
+  leftSpeed = baseSpeed - output;
+  rightSpeed = baseSpeed + output;  // speed is adjusted to allow robot to move smoothly and accurately
 }
