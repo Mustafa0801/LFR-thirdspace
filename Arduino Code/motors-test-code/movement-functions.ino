@@ -1,4 +1,7 @@
 void stop() {
+  digitalWrite(leftMotor, LOW);
+  digitalWrite(rightMotor, LOW);
+  
   digitalWrite(lf, LOW);
   digitalWrite(rf, LOW);
 
@@ -9,8 +12,11 @@ void stop() {
 }
 
 void forward(int _speedL, int _speedR) {
-  analogWrite(lf, _speedL);
-  analogWrite(rf, _speedR);
+  analogWrite(leftMotor, _speedL);
+  analogWrite(rightMotor, _speedR);
+
+  digitalWrite(lf, HIGH);
+  digitalWrite(rf, HIGH);
 
   digitalWrite(lb, LOW);
   digitalWrite(rb, LOW);
@@ -19,28 +25,37 @@ void forward(int _speedL, int _speedR) {
 }
 
 void reverse(int _speedL, int _speedR) {
+  analogWrite(leftMotor, _speedL);
+  analogWrite(rightMotor, _speedR);
+  
   digitalWrite(lf, LOW);
   digitalWrite(rf, LOW);
 
-  analogWrite(lb, _speedL);
-  analogWrite(rb, _speedR);
+  digitalWrite(lb, HIGH);
+  digitalWrite(rb, HIGH);
 
   Serial.println("reverse");
 }
 
 void right(int _speedL, int _speedR){
-  analogWrite(lf, _speedL);
+  analogWrite(leftMotor, _speedL);
+  analogWrite(rightMotor, _speedR);
+  
+  digitalWrite(lf, HIGH);
   digitalWrite(rf, LOW);
 
   digitalWrite(lb, LOW);
-  analogWrite(rb, _speedR);
+  digitalWrite(rb, HIGH);
 
   Serial.println("right");
 }
 
 void rightTurn(int _speedL, int _speedR){
+  analogWrite(leftMotor, _speedL);
+  analogWrite(leftMotor, _speedR);
+  
   digitalWrite(lf, LOW);
-  analogWrite(rf, _speedR);
+  digitalWrite(rf, HIGH);
 
   digitalWrite(lb, LOW);
   digitalWrite(rb, LOW);
@@ -49,17 +64,23 @@ void rightTurn(int _speedL, int _speedR){
 }
 
 void left(int _speedL, int _speedR){
+  analogWrite(leftMotor, _speedL);
+  analogWrite(rightMotor, _speedR);
+ 
   digitalWrite(lf, LOW);
-  analogWrite(rf, _speedR);
+  digitalWrite(rf, HIGH);
 
-  analogWrite(lb, _speedL);
+  digitalWrite(lb, HIGH);
   digitalWrite(rb, LOW);
 
   Serial.println("left");
 }
 
 void leftTurn(int _speedL, int _speedR){
-  analogWrite(lf, _speedL);
+  analogWrite(leftMotor, _speedL);
+  analogWrite(rightMotor, _speedR);
+  
+  digitalWrite(lf, HIGH);
   digitalWrite(rf, LOW);
 
   digitalWrite(lb, LOW);
