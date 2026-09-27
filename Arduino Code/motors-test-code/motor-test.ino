@@ -26,38 +26,41 @@ void loop() {
   // This is all a movement loop which tests each function one by one with short delays in between, 
   // i.e car moves in certain direction then stops, then moves
 
-  delay(wait);
-  forward(leftSpeed, rightSpeed);  // car moves forward after 1 second delay
+  //delay(wait);
+  //forward(leftSpeed, rightSpeed);  // car moves forward after 1 second delay
 
-  delay(wait);
-  stop();   // 1.5 second later car stops
+  //delay(wait);
+  //stop();   // 1.5 second later car stops
 
-  delay(wait);
-  right(leftSpeed, rightSpeed); // 1 second later car moves right
+  //delay(wait);
+  //right(leftSpeed, rightSpeed); // 1 second later car moves right
 
-  delay(wait);
-  stop(); 
+  //delay(wait);
+  //stop(); 
 
-  delay(wait);
-  rightTurn(leftSpeed, rightSpeed); // car turns right
+  //delay(wait);
+  //rightTurn(leftSpeed, rightSpeed); // car turns right
 
-  delay(wait);
-  stop();
+  //delay(wait);
+  // stop();
   
-  delay(wait);
-  reverse(leftSpeed, rightSpeed);  //  car reverses
+  //delay(wait);
+  //reverse(leftSpeed, rightSpeed);  //  car reverses
 
-  delay(wait);
-  stop(); // 1.5 second later car stops again
+  //delay(wait);
+  //stop(); // 1.5 second later car stops again
 
-  delay(wait);
-  left(leftSpeed, rightSpeed);  // car moves left
+  //delay(wait);
+  //left(leftSpeed, rightSpeed);  // car moves left
 
-  delay(wait);
-  stop();  
+  //delay(wait);
+  //stop();  
 
-  delay(wait);
-  leftTurn(leftSpeed, rightSpeed);  // car turns left
+  //delay(wait);
+  //leftTurn(leftSpeed, rightSpeed);  // car turns left
+
+  digitalWrite(leftMotor, HIGH);
+  digitalWrite(lf, HIGH);
 
   delay(wait);
   stop();
