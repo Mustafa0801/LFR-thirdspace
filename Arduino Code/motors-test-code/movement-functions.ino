@@ -18,7 +18,7 @@ void forward(int _speedL, int _speedR) {
   // digitalWrite(lf, HIGH);
   // digitalWrite(rf, HIGH); // sets only forward motors to HIGH so that car moves forward
 
-  digitalWrite(lb, LOw);
+  digitalWrite(lb, LOW);
   digitalWrite(rb, LOW);
 
   Serial.println("forward");
