@@ -79,17 +79,17 @@ void loop() {
   if (error = 0){
     Forward(leftSpeed, rightSpeed);
   }
-  else if (error > 0 && error <= 2){    // line slightly left of robot
-    MoveLeft(leftSpeed, rightSpeed);
-  }
-  else if (error > 2 && error <= 4){    // for sharp left turns
-    TurnLeft(leftSpeed, rightSpeed);
-  }
-  else if (error < 0 && error >= -2){   // line slightly right of robot
+  else if (error > 0 && error <= 1){    // line slightly left of robot
     MoveRight(leftSpeed, rightSpeed);
   }
-  else if (error < -2 && error >= -4){  // for sharp right turns
+  else if (error > 1 && error <= 2){    // for sharp left turns
     TurnRight(leftSpeed, rightSpeed);
+  }
+  else if (error < 0 && error >= -1){   // line slightly right of robot
+    MoveLeft(leftSpeed, rightSpeed);
+  }
+  else if (error < -1 && error >= -2){  // for sharp right turns
+    TurnLeft(leftSpeed, rightSpeed);
   }
 
   Serial.println();   // going to next line
