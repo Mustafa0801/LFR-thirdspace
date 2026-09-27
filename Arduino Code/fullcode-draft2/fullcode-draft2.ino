@@ -54,4 +54,18 @@ void loop() {
 
   leftSpeed = baseSpeed - output;
   rightSpeed = baseSpeed + output;  // speed is adjusted to allow robot to move smoothly and accurately
+
+  // maximum and minimum thresholds for speed
+  if (leftSpeed > 255.0){
+    leftSpeed = 255.0;
+  }
+  else if (leftSpeed < 0){
+    leftSpeed = 0;
+  }
+  if (rightSpeed > 255.0){
+    rightSpeed = 255.0;
+  }
+  else if (rightSpeed < 0){
+    rightSpeed = 0;
+  }
 }
