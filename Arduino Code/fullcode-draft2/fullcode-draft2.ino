@@ -68,4 +68,8 @@ void loop() {
   else if (rightSpeed < 0){
     rightSpeed = 0;
   }
+
+  leftSpeed = round(leftSpeed);     // converting speeds from float to int since the movement functions need integer value for speed
+  rightSpeed = round(rightSpeed);
+  Serial.print(" | left speed: "+String(leftSpeed)+" right speed: "+String(rightSpeed));
 }
