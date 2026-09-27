@@ -4,17 +4,17 @@
 
 #define leftMotor 3
 #define rightMotor 5
-#define lf 2
-#define rf 7      
-#define lb 4
-#define rb 6
+#define lf 2    // left forward servo
+#define rf 7    // right forward servo
+#define lb 4    // left back servo
+#define rb 6    // right back servo
 
 // pin numbers for sensor array
 
 #define irL2 12   // left most
-#define irL1 11
+#define irL1 11   // left of middle
 #define irM 10    // middle
-#define irR1 9
+#define irR1 9    // right of middle
 #define irR2 8    // right most
 
 float error;
@@ -28,7 +28,7 @@ unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
 float Kp = 20.0;
-float Ki = 0.05;    // constants used to calculate PID
+float Ki = 0.05;    // constants used to calculate PID (still need to be adjusted) 
 float Kd = 5.0;
 
 void setup() {
@@ -50,13 +50,14 @@ void setup() {
 
 void loop() {
   error = ReadSensors();
-  float output = CalculatePID(error);
+  float outputPID = CalculatePID(error);
+
   Serial.println();
 
-  leftSpeed = baseSpeed - output;
-  rightSpeed = baseSpeed + output;  // speed is adjusted to allow robot to move smoothly and accurately
+  leftSpeed = baseSpeed - outputPID;
+  rightSpeed = baseSpeed + outputPID;  // speed is adjusted according to PID to allow robot to move smoothly and accurately
 
-  // maximum and minimum thresholds for speed
+  // maximum and minimum thresholds for speed, since we can only analogWrite values between 0-255 inclusive
   if (leftSpeed > 255.0){
     leftSpeed = 255.0;
   }
@@ -78,18 +79,18 @@ void loop() {
   if (error = 0){
     Forward(leftSpeed, rightSpeed);
   }
-  else if (error > 0 && error <= 2){
+  else if (error > 0 && error <= 2){    // line slightly left of robot
     MoveLeft(leftSpeed, rightSpeed);
   }
-  else if (error > 2 && error <= 4){
+  else if (error > 2 && error <= 4){    // for sharp left turns
     TurnLeft(leftSpeed, rightSpeed);
   }
-  else if (error < 0 && error >= -2){
+  else if (error < 0 && error >= -2){   // line slightly right of robot
     MoveRight(leftSpeed, rightSpeed);
   }
-  else if (error < -2 && error >= -4){
+  else if (error < -2 && error >= -4){  // for sharp right turns
     TurnRight(leftSpeed, rightSpeed);
   }
 
-  Serial.println();
+  Serial.println();   // going to next line
 }
