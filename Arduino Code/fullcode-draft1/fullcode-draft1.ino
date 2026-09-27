@@ -1,25 +1,21 @@
 //  COMBINING PREVIOUS WRITTEN CODE INTO ONE FILE TO GET A DRAFT OF THE COLLECTIVE CODE
 
-#define motorLeft 3   // declaring pin numbers for motor and servos
-#define motorRight 5
-#define lf 2    
-#define lb 4
-#define rf 7
-#define rb 6
+#define lf 5  // declaring pin numbers for motors
+#define lb 6
+#define rf 3
+#define rb 9
 
-#define irL2 12  // declaring pin numbers for sensor array
-#define irL1 11
+#define irL2 4  // declaring pin numbers for sensor array
+#define irL1 8
 #define irM 10
-#define irR1 9
-#define irR2 8
+#define irR1 11
+#define irR2 12
 
-int leftSpeed = 100;  // placeholder values for speeds
-int rightSpeed = 100;
+int leftSpeed = 150;  // placeholder values for speeds
+int rightSpeed = 150;
 int linePos;
 
 void setup() {
-  pinMode(motorLeft, OUTPUT);
-  pinMode(motorRight, INPUT);
   pinMode(lf, OUTPUT);
   pinMode(lb, OUTPUT);    
   pinMode(rf, OUTPUT);
