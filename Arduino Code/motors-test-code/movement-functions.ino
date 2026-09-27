@@ -22,8 +22,8 @@ void reverse(int _speedL, int _speedR) {
   digitalWrite(lf, LOW);
   digitalWrite(rf, LOW);
 
-  analogWrite(lb, HIGH);
-  analogWrite(rb, HIGH);
+  analogWrite(lb, _speedL);
+  analogWrite(rb, _speedR);
 
   Serial.println("reverse");
 }
