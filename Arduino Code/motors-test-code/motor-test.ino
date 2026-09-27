@@ -1,9 +1,10 @@
-#define motor1 5 // left engine
-#define motor2 3 // right engine
-  // #define lf 2 // front-left wheel
-#define lb 6 // left wheel
-  // #define rf 7 // front-right wheel
-#define rb 4 // right wheel
+// CHANGED THE VARIABLES ACCORDING TO ACTUAL ROBOT, WILL NEED TO BE CHANGED FOR ALL OTHER CODES INVOLVING THE MOTORS
+// INSTEAD OF 6 ONLY 4 PINS USED
+
+#define lf 5 // left wheel forward
+#define rf 3 // right wheel forward
+#define lb 6 // left wheel backward
+#define rb 4 // right wheel backward
 
 int leftSpeed = 200; // placeholder value for speeds 
 int rightSpeed = 200;
@@ -11,11 +12,9 @@ int wait = 1500;
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(motor1, OUTPUT);
-  pinMode(motor2, OUTPUT);
-    // pinMode(lf, OUTPUT);
+  pinMode(lf, OUTPUT);
+  pinMode(rf, OUTPUT);
   pinMode(lb, OUTPUT);
-    // pinMode(rf, OUTPUT);
   pinMode(rb, OUTPUT);
   Serial.begin(9600);
 }
@@ -31,34 +30,34 @@ void loop() {
   delay(wait);
   stop();   // 1.5 second later car stops
 
-  // delay(wait);
-  // right(leftSpeed, rightSpeed); // 1 second later car moves right
+  delay(wait);
+  right(leftSpeed, rightSpeed); // 1 second later car moves right
 
-  //delay(wait);
-  // stop(); 
+  delay(wait);
+  stop(); 
 
-  //delay(wait);
-  // rightTurn(leftSpeed, rightSpeed); // car turns right
+  delay(wait);
+  rightTurn(leftSpeed, rightSpeed); // car turns right
 
-  //delay(wait);
-  //stop();
+  delay(wait);
+  stop();
   
-  //delay(wait);
-  // reverse(leftSpeed, rightSpeed);  //  car reverses
+  delay(wait);
+  reverse(leftSpeed, rightSpeed);  //  car reverses
 
-  //delay(wait);
-  //stop(); // 1.5 second later car stops again
+  delay(wait);
+  stop(); // 1.5 second later car stops again
 
-  //delay(wait);
-  // left(leftSpeed, rightSpeed);  // car moves left
+  delay(wait);
+  left(leftSpeed, rightSpeed);  // car moves left
 
-  //delay(wait);
-  // stop();  
+  delay(wait);
+  stop();  
 
-  //delay(wait);
-  // leftTurn(leftSpeed, rightSpeed);  // car turns left
+  delay(wait);
+  leftTurn(leftSpeed, rightSpeed);  // car turns left
 
-  //delay(wait);
-  //stop();
+  delay(wait);
+  stop();
   
 }
