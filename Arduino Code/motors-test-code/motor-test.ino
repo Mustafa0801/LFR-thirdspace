@@ -1,17 +1,19 @@
-// CHANGED THE VARIABLES ACCORDING TO ACTUAL ROBOT, WILL NEED TO BE CHANGED FOR ALL OTHER CODES INVOLVING THE MOTORS
-// INSTEAD OF 6 ONLY 4 PINS USED
+// REVERTED EVERYTHING TO ORIGINAL BECAUSE I WAS DUMB
 
-#define lf 5 // left wheel forward
-#define rf 3 // right wheel forward
-#define lb 6 // left wheel backward
-#define rb 9 // right wheel backward
+#define leftMotor 5 
+#define rightMotor 3
+#define lf 2 // left wheel forward
+#define rf 7 // right wheel forward
+#define lb 4 // left wheel backward
+#define rb 6 // right wheel backward
 
 int leftSpeed = 200; // placeholder value for speeds 
 int rightSpeed = 200;
 int wait = 1500;
 
 void setup() {
-  // put your setup code here, to run once:
+  pinMode(leftMotor, OUTPUT);
+  pinMode(rightMotor, OUTPUT);
   pinMode(lf, OUTPUT);
   pinMode(rf, OUTPUT);
   pinMode(lb, OUTPUT);
