@@ -1,12 +1,14 @@
 //  COMBINING PREVIOUS WRITTEN CODE INTO ONE FILE TO GET A DRAFT OF THE COLLECTIVE CODE
 
-#define lf 5  // declaring pin numbers for motors
-#define lb 6
-#define rf 3
-#define rb 9
+#define leftMotor 3
+#define rightMotor 5
+#define lf 2  // declaring pin numbers for motors
+#define lb 4
+#define rf 7
+#define rb 6
 
-#define irL2 4  // declaring pin numbers for sensor array
-#define irL1 8
+#define irL2 8 // declaring pin numbers for sensor array
+#define irL1 9
 #define irM 10
 #define irR1 11
 #define irR2 12
@@ -16,6 +18,8 @@ int rightSpeed = 150;
 int linePos;
 
 void setup() {
+  pinMode(leftMotor, OUTPUT);
+  pinMode(rightMotor, OUTPUT);
   pinMode(lf, OUTPUT);
   pinMode(lb, OUTPUT);    
   pinMode(rf, OUTPUT);
