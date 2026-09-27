@@ -18,18 +18,37 @@
 #define irR2 8    // right most
 
 float error;
-float previousError = 0;
+float previousError = 0;    
 
-float baseSpeed = 100.0;
+float baseSpeed = 100.0;  
 float leftSpeed;
 float rightSpeed;
 
-void setup() {
-  // put your setup code here, to run once:
+unsigned long currentTime;    // used to calculate delta time
+unsigned long lastTime;
 
+float Kp = 20.0;
+float Ki = 0.05;    // constants used to calculate PID
+float Kd = 5.0;
+
+void setup() {
+  pinMode(leftMotor, OUTPUT);
+  pinMode(rightMotor, OUTPUT);
+  pinMode(lf, OUTPUT);
+  pinMode(rf, OUTPUT);
+  pinMode(lb, OUTPUT);
+  pinMode(rb, OUTPUT);
+
+  pinMode(irL2, INPUT);
+  pinMode(irL1, INPUT);
+  pinMode(irM, INPUT);
+  pinMode(irR1, INPUT);
+  pinMode(irR2, INPUT);
+
+  Serial.begin(9600);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  
 
 }
