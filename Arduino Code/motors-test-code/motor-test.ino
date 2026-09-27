@@ -4,7 +4,7 @@
 #define lf 5 // left wheel forward
 #define rf 3 // right wheel forward
 #define lb 6 // left wheel backward
-#define rb 4 // right wheel backward
+#define rb 9 // right wheel backward
 
 int leftSpeed = 200; // placeholder value for speeds 
 int rightSpeed = 200;
