@@ -1,6 +1,6 @@
 void stop() {
-  digitalWrite(motor1, HIGH);
-  digitalWrite(motor2, HIGH);
+  digitalWrite(motor1, LOW);
+  digitalWrite(motor2, LOW);
 
   // digitalWrite(lf, LOW);
   // digitalWrite(rf, LOW);  // Sets all motors to LOW, making car stop
