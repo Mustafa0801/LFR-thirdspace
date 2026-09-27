@@ -1,58 +1,79 @@
 //  ALL MOVEMENT FUNCTIONS
 
-void stop(){
+void stop() {
+  digitalWrite(leftMotor, LOW);
+  digitalWrite(rightMotor, LOW);
+  
   digitalWrite(lf, LOW);
-  digitalWrite(lb, LOW);
   digitalWrite(rf, LOW);
+
+  digitalWrite(lb, LOW);  
   digitalWrite(rb, LOW);
-  Serial.print(" | stopped ");
+
+  Serial.println(" | stopped");
 }
 
-void forward(int _speedL, int _speedR){
-  analogWrite(lf, _speedL);
-  analogWrite(rf, _speedR);
+
+void forward(int _speedL, int _speedR) {
+  analogWrite(leftMotor, _speedL);
+  analogWrite(rightMotor, _speedR);
+
+  digitalWrite(lf, HIGH);
+  digitalWrite(rf, HIGH);
 
   digitalWrite(lb, LOW);
   digitalWrite(rb, LOW);
 
-  Serial.print(" | forward ");
+  Serial.println(" | forward");
 }
 
 void right(int _speedL, int _speedR){
-  analogWrite(lf, _speedL);
-  digitalWrite(lb, LOW);
-
+  analogWrite(leftMotor, _speedL);
+  analogWrite(rightMotor, _speedR);
+  
+  digitalWrite(lf, HIGH);
   digitalWrite(rf, LOW);
-  analogWrite(rb, _speedR);
+
+  digitalWrite(lb, LOW);
+  digitalWrite(rb, HIGH);
 
   Serial.print(" | right ");
 }
 
 void rightTurn(int _speedL, int _speedR){
+  analogWrite(leftMotor, _speedL);
+  analogWrite(leftMotor, _speedR);
+  
   digitalWrite(lf, LOW);
-  digitalWrite(lb, LOW);
+  digitalWrite(rf, HIGH);
 
-  analogWrite(rf, _speedR);
+  digitalWrite(lb, LOW);
   digitalWrite(rb, LOW);
 
   Serial.print(" | right point turn ");
 }
 
 void left(int _speedL, int _speedR){
+  analogWrite(leftMotor, _speedL);
+  analogWrite(rightMotor, _speedR);
+ 
   digitalWrite(lf, LOW);
-  analogWrite(lb, _speedL);
+  digitalWrite(rf, HIGH);
 
-  analogWrite(rf, _speedR);
+  digitalWrite(lb, HIGH);
   digitalWrite(rb, LOW);
 
   Serial.print(" | left ");
 }
 
 void leftTurn(int _speedL, int _speedR){
-  analogWrite(lf, _speedL);
-  digitalWrite(lb, LOW);
-
+  analogWrite(leftMotor, _speedL);
+  analogWrite(rightMotor, _speedR);
+  
+  digitalWrite(lf, HIGH);
   digitalWrite(rf, LOW);
+
+  digitalWrite(lb, LOW);
   digitalWrite(rb, LOW);
   
   Serial.print(" | left point turn ");
