@@ -7,3 +7,6 @@ However motors still didnt work as intended, most times when both should move on
 <img width="245" height="400" alt="WhatsApp Image 2026-09-28 at 6 55 17 AM" src="https://github.com/user-attachments/assets/a5fb432f-3bf3-451a-aa81-575de9ebd3ba" />
 <img width="333" height="400" alt="WhatsApp Image 2026-09-28 at 6 55 18 AM" src="https://github.com/user-attachments/assets/6900816c-d2a1-42d5-b582-d9024267bf63" />
 <img width="295" height="400" alt="WhatsApp Image 2026-09-28 at 6 56 11 AM" src="https://github.com/user-attachments/assets/3c640541-7567-4181-83a1-2f2864c7c14f" />
+
+## Muhammad
+Took a lot of time wiring the robot, motors kept falling off so they had to be re-adjusted. Lengths were measured for the base. 
