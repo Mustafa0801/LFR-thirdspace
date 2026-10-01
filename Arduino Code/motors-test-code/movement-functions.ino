@@ -58,7 +58,7 @@ void rightTurn(int _speedL, int _speedR){
   digitalWrite(rb, LOW);
 
   analogWrite(leftMotor, _speedL);
-  analogWrite(leftMotor, _speedR);
+  analogWrite(rightMotor, _speedR);
   
 
   Serial.println("right turn");
