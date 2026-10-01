@@ -7,8 +7,8 @@
 #define lb 4 // left wheel backward
 #define rb 6 // right wheel backward
 
-int leftSpeed = 255; // placeholder value for speeds 
-int rightSpeed = 255;
+int leftSpeed = 150; // placeholder value for speeds 
+int rightSpeed = 150;
 int wait = 1500;
 
 void setup() {
@@ -62,6 +62,4 @@ void loop() {
   delay(wait);
   stop();
 
-  leftSpeed = 100;
-  rightSpeed = 100;
 }
