@@ -7,8 +7,8 @@
 #define lb 4 // left wheel backward
 #define rb 6 // right wheel backward
 
-int leftSpeed = 150; // placeholder value for speeds 
-int rightSpeed = 150;
+int leftSpeed = 150;    // placeholder value for speeds 
+int rightSpeed = 150;   // left wheel currently gets stuck for speeds under ~130, right wheel gets stuck for speeds under ~110
 int wait = 1500;
 
 void setup() {
