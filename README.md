@@ -1,5 +1,5 @@
 # LFR-thirdspace
-Line following robot project for HackClub YSWS thirdspace
+Line following robot project for HackClub YSWS thirdspace, uses 2 motors and an array of 5 sensors
 
 ## WEEK 1
 It is very important to note that this week we did not really have any of the hardware components for the robot ready e.g motors, sensors, e.t.c.
