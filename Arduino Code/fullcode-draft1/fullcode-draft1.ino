@@ -1,7 +1,7 @@
 //  COMBINING PREVIOUS WRITTEN CODE INTO ONE FILE TO GET A DRAFT OF THE COLLECTIVE CODE
 
-#define leftMotor 3
-#define rightMotor 5
+#define leftMotor 5
+#define rightMotor 3
 #define lf 2  // declaring pin numbers for motors
 #define lb 4
 #define rf 7
@@ -39,19 +39,19 @@ void loop() {
 
   switch (linePos){     // checks line position to decide movement of robot
     case -4:            
-      leftTurn(leftSpeed, rightSpeed);  // if line is far left then robot needs to turn sharply left
+      leftRotate(leftSpeed, rightSpeed);  // if line is far left then robot needs to turn sharply left
       break;
     case -2:
-      left(leftSpeed, rightSpeed);      // line is slightly left so robot needs to move left slightly
+      leftTurn(leftSpeed, rightSpeed);      // line is slightly left so robot needs to move left slightly
       break;
     case 0:
       forward(leftSpeed, rightSpeed);   // line is infront so robot needs to move forward
       break;
     case 2:
-      right(leftSpeed, rightSpeed);     // line slightly right, robot needs to move slightly right
+      rightTurn(leftSpeed, rightSpeed);     // line slightly right, robot needs to move slightly right
       break;
     case 4:
-      rightTurn(leftSpeed, rightSpeed); // line far right, robot needs to turn sharply right
+      rightRotate(leftSpeed, rightSpeed); // line far right, robot needs to turn sharply right
       break;
   }
 
