@@ -37,7 +37,7 @@ void rightRotate(int _speedL, int _speedR){   // robot rotates right (clockwise)
   analogWrite(leftMotor, _speedL);
   analogWrite(rightMotor, _speedR);
 
-  Serial.print(" | right ");
+  Serial.print(" | right rotate ");
 }
 
 void rightTurn(int _speedL, int _speedR){     // robot turns right while moving
@@ -50,7 +50,7 @@ void rightTurn(int _speedL, int _speedR){     // robot turns right while moving
   analogWrite(leftMotor, _speedL);
   digitalWrite(rightMotor, LOW);
 
-  Serial.print(" | right point turn ");
+  Serial.print(" | right turn ");
 }
 
 void leftRotate(int _speedL, int _speedR){    // robot rotates left (anti clockwise) about a point
@@ -63,7 +63,7 @@ void leftRotate(int _speedL, int _speedR){    // robot rotates left (anti clockw
   analogWrite(leftMotor, _speedL);
   analogWrite(rightMotor, _speedR);
 
-  Serial.print(" | left ");
+  Serial.print(" | left rotate ");
 }
 
 void leftTurn(int _speedL, int _speedR){      // robot turns left while moving
@@ -76,6 +76,6 @@ void leftTurn(int _speedL, int _speedR){      // robot turns left while moving
   digitalWrite(leftMotor, LOW);
   analogWrite(rightMotor, _speedR);
 
-  Serial.print(" | left point turn ");
+  Serial.print(" | left turn ");
 }
 
