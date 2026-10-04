@@ -20,16 +20,16 @@
 float error;
 float previousError = 0;    
 
-float baseSpeed = 170.0;  
+float baseSpeed = 200.0;  
 float leftSpeed;
 float rightSpeed;
 
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 20.0;
-float Ki = 0.1;    // constants used to calculate PID (still need to be adjusted) 
-float Kd = 5.0;
+float Kp = 0;
+float Ki = 0;    // constants used to calculate PID (still need to be adjusted) 
+float Kd = 0;
 
 void setup() {
   pinMode(leftMotor, OUTPUT);
