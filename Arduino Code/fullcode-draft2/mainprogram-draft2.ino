@@ -2,8 +2,8 @@
 
 // pin numbers for motors and wheel servos
 
-#define leftMotor 3
-#define rightMotor 5
+#define leftMotor 5
+#define rightMotor 3
 #define lf 2    // left forward servo
 #define rf 7    // right forward servo
 #define lb 4    // left back servo
@@ -11,16 +11,16 @@
 
 // pin numbers for sensor array
 
-#define irL2 12   // left most
-#define irL1 11   // left of middle
+#define irL2 8   // left most
+#define irL1 9  // left of middle
 #define irM 10    // middle
-#define irR1 9    // right of middle
-#define irR2 8    // right most
+#define irR1 11    // right of middle
+#define irR2 12    // right most
 
 float error;
 float previousError = 0;    
 
-float baseSpeed = 100.0;  
+float baseSpeed = 170.0;  
 float leftSpeed;
 float rightSpeed;
 
@@ -28,7 +28,7 @@ unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
 float Kp = 20.0;
-float Ki = 0.05;    // constants used to calculate PID (still need to be adjusted) 
+float Ki = 0.1;    // constants used to calculate PID (still need to be adjusted) 
 float Kd = 5.0;
 
 void setup() {
@@ -79,16 +79,10 @@ void loop() {
   if (error == 0){
     Forward(leftSpeed, rightSpeed);
   }
-  else if (error > 0 && error <= 1.0){    // line slightly left of robot
-    MoveRight(leftSpeed, rightSpeed);
-  }
-  else if (error > 1.0 && error <= 2.0){    // for sharp left turns
+  else if (error > 0 && error <= 2.0){    // line left of robot
     TurnRight(leftSpeed, rightSpeed);
   }
-  else if (error < 0 && error >= -1.0){   // line slightly right of robot
-    MoveLeft(leftSpeed, rightSpeed);
-  }
-  else if (error < -1.0 && error >= -2.0){  // for sharp right turns
+  else if (error < 0 && error >= -2.0){   // line right of robot
     TurnLeft(leftSpeed, rightSpeed);
   }
 
