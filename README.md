@@ -15,4 +15,4 @@ Due to lack of time we weren't able to test it enough so it has many issues, onl
 However it is probably issue with the hardware rather than the code.
 
 ## WEEK 3
-Hoped to finish the project this week but once again faced some technical difficulties, did everything that we needed to do however some components seem to be faulty due to which the robot is unable to move. Unfortunately if we continue it to the next week then it would be difficult to fulfill the 10 hour requirement; it's very disappointing but it feels there is nothing we can do to make it work, and getting new parts wouldn't be plausible.
+Hoped to finish the project this week but once again faced some technical difficulties, did everything that we needed to do however some components seem to be faulty due to which the robot is unable to move. Unfortunately we will have to continue it to the next week. it's very disappointing but it feels there is nothing we can do to make it work.
