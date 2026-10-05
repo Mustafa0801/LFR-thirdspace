@@ -11,3 +11,9 @@ Then assembled 3D printed chassis and rewired everything, however the robot was 
 <img width="294" height="400" alt="WhatsApp Image 2026-10-05 at 7 28 50 AM" src="https://github.com/user-attachments/assets/17ffc3db-f8fc-4905-9935-fbd6e03e1580" />
 <img width="291" height="400" alt="WhatsApp Image 2026-10-05 at 7 28 49 AM" src="https://github.com/user-attachments/assets/5bc0fac2-1c9e-410e-83a8-7bb519307ca1" />
 <img width="325" height="400" alt="WhatsApp Image 2026-10-05 at 7 28 51 AM" src="https://github.com/user-attachments/assets/7a7cf083-0955-4917-9000-b722774bd044" />
+
+## Muhammad
+Cad journal:
+Main things that I did were to make sure all my mounts were proper. It took quite some time and I had to redo them twice or thrice because i realised that either the hole sizes were weird or that my sketch wasnt truly editable or changable later, and so for the sake of making possible edits i redid many sketches on the base plate
+I also calculated the volume requires to 3d print the base chassis in the BOM, ans generally just validated my design
+I also added a small modular plate thing on the padded area at the top and added mounting holes and weights to the arduino and l298n. Freecad crashed and my files corrupted twice so I had to redo them again. Lastly i imported my model to make sure it sliced properly in the prussa slicer. It did, so I tried to find the center of mass with the weights so I couls find the optimum place to put in the "castor wheel"  (but it didnt end up working properly so I just eyeballed it and called it a day)
