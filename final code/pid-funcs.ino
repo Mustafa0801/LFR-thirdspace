@@ -12,8 +12,8 @@ float CalculateDeltaTime(){
 float CalculatePID(float _error){
   float deltaTime = CalculateDeltaTime();
   float _output;
-  
-  if (deltaTime <= 0){
+
+  if (deltaTime <= 0){  // to prevent dividing by zero
     _output = 0;
   }
   else{
