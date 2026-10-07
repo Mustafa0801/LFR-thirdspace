@@ -19,6 +19,7 @@
 
 float error;
 float previousError = 0;    
+float integral = 0;
 
 float baseSpeed = 200.0;  
 float leftSpeed;
@@ -45,6 +46,7 @@ void setup() {
   pinMode(irR1, INPUT);
   pinMode(irR2, INPUT);
 
+  lastTime = micros();
   Serial.begin(9600);
 }
 
