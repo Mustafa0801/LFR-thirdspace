@@ -28,9 +28,9 @@ float rightSpeed;
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 0;
-float Ki = 0;    // constants used to calculate PID (still need to be adjusted) 
-float Kd = 0;
+float Kp = 20.0;
+float Ki = 0.5;    // constants used to calculate PID (still need to be adjusted) 
+float Kd = 5.0;
 
 void setup() {
   pinMode(leftMotor, OUTPUT);
@@ -77,16 +77,7 @@ void loop() {
   rightSpeed = round(rightSpeed);
   Serial.print(" | left speed: "+String(leftSpeed)+" right speed: "+String(rightSpeed));
 
-  // moving according to error
-  if (error == 0){
-    Forward(leftSpeed, rightSpeed);
-  }
-  else if (error > 0 && error <= 2.0){    // line left of robot
-    TurnRight(leftSpeed, rightSpeed);
-  }
-  else if (error < 0 && error >= -2.0){   // line right of robot
-    TurnLeft(leftSpeed, rightSpeed);
-  }
+  Forward(leftSpeed, rightSpeed);  // the direction will be automatically changed by the varying left and right speeds
 
   Serial.println();   // going to next line
 }
