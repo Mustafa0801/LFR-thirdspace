@@ -28,9 +28,9 @@ float rightSpeed;
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 110.0;
-float Kd = 5.0;    // constants used to calculate PID (still need to be adjusted) 
-float Ki = 2.0;
+float Kp = 120.0;
+float Kd = 15.0;    // constants used to calculate PID (still need to be adjusted) 
+float Ki = 3.0;
 
 void setup() {
   pinMode(leftMotor, OUTPUT);
