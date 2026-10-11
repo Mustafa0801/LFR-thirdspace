@@ -28,7 +28,7 @@ float rightSpeed;
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 50.0;
+float Kp = 60.0;
 float Ki = 0;    // constants used to calculate PID (still need to be adjusted) 
 float Kd = 0;
 
@@ -75,12 +75,7 @@ void loop() {
   rightSpeed = round(rightSpeed);
   //Serial.print(" | left speed: "+String(leftSpeed)+" right speed: "+String(rightSpeed));
 
-  if (error == 2.0){
-    TurnLeft(leftSpeed, rightSpeed);
-  } else if (error == -2.0){
-    TurnRight (leftSpeed, rightSpeed);
-  } else{
-    Forward(leftSpeed, rightSpeed);  // the direction will be automatically changed by the varying left and right speeds
-  }
+  Forward(leftSpeed, rightSpeed);  // the direction will be automatically changed by the varying left and right speeds
+
   //Serial.println();   // going to next line
 }
