@@ -11,12 +11,11 @@
 
 // pin numbers for sensor array
 
-#define irL2 A0  // left most
-#define irL1 A1  // left of middle
-#define irM1 A2  // middle
-#define irM2 A3
-#define irR1 A4  // right of middle
-#define irR2 A5  // right most
+#define irL2 12  // left most
+#define irL1 11  // left of middle
+#define irM 10  // middle
+#define irR1 9  // right of middle
+#define irR2 8  // right most
 
 float error;
 float previousError = 0;    
@@ -43,13 +42,12 @@ void setup() {
 
   pinMode(irL2, INPUT);
   pinMode(irL1, INPUT);
-  pinMode(irM1, INPUT);
-  pinMode(irM2, INPUT);
+  pinMode(irM, INPUT);
   pinMode(irR1, INPUT);
   pinMode(irR2, INPUT);
 
   lastTime = micros();
-  Serial.begin(9600);
+  //Serial.begin(9600);
 }
 
 void loop() {
