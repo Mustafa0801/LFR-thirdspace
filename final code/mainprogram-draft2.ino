@@ -54,8 +54,6 @@ void loop() {
   error = ReadSensors();
   float PID_Output = CalculatePID(error);
 
-  Serial.println();
-
   leftSpeed = baseSpeed - PID_Output;
   rightSpeed = baseSpeed + PID_Output;  // speed is adjusted according to PID to allow robot to move smoothly and accurately
 
