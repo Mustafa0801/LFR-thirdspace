@@ -21,15 +21,15 @@ float error;
 float previousError = 0;    
 float integral = 0;
 
-float baseSpeed = 180.0;  
+float baseSpeed = 170.0;  
 float leftSpeed;
 float rightSpeed;
 
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 200.0;
-float Kd = 10.0;    // constants used to calculate PID (still need to be adjusted) 
+float Kp = 150.0;
+float Kd = 10.0;    // constants used to calculate PID
 float Ki = 0.5;
 
 void setup() {
@@ -78,5 +78,5 @@ void loop() {
 
   Forward(leftSpeed, rightSpeed);  // the direction will be automatically changed by the varying left and right speeds
 
-  Serial.println();   // going to next line
+  //Serial.println();   // going to next line
 }
