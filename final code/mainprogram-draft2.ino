@@ -21,7 +21,7 @@ float error;
 float previousError = 0;    
 float integral = 0;
 
-float baseSpeed = 75.0;  
+float baseSpeed = 120.0;  
 float leftSpeed;
 float rightSpeed;
 
