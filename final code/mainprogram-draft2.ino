@@ -75,7 +75,12 @@ void loop() {
   rightSpeed = round(rightSpeed);
   //Serial.print(" | left speed: "+String(leftSpeed)+" right speed: "+String(rightSpeed));
 
-  Forward(leftSpeed, rightSpeed);  // the direction will be automatically changed by the varying left and right speeds
-
+  if (error == 2.0){
+    TurnLeft(leftSpeed, rightSpeed);
+  } else if (error == -2.0){
+    TurnRight (leftSpeed, rightSpeed);
+  } else{
+    Forward(leftSpeed, rightSpeed);  // the direction will be automatically changed by the varying left and right speeds
+  }
   //Serial.println();   // going to next line
 }
