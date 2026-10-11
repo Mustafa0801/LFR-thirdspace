@@ -1,5 +1,5 @@
 
-# Line following robot project for HackClub YSWS thirdspace, uses 2 motors and an array of 5 sensors, powered by 2 Li-ion batteries
+# Line following robot project for HackClub thirdspace, uses 2 motors and an array of 5 sensors, powered by 2 Li-ion batteries and uses PID algorithm
 
 PLEASE NOTE: THE PLAYABLES FOR WEEK 1 AND 2 WERE BUGGED SO I HAVE FIXED THEM NOW, THE LINKS IN THE SUBMISSION DONT WORK SO PLEASE FIND THE DEMOS FOR WEEK 1 AND 2 IN THE PLAYABLES FOLDER
 
