@@ -21,14 +21,14 @@ float error;
 float previousError = 0;    
 float integral = 0;
 
-float baseSpeed = 125.0;  
+float baseSpeed = 75.0;  
 float leftSpeed;
 float rightSpeed;
 
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 40.0;
+float Kp = 45.0;
 float Ki = 0;    // constants used to calculate PID (still need to be adjusted) 
 float Kd = 0;
 
