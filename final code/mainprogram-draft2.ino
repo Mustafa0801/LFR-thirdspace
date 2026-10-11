@@ -1,4 +1,4 @@
-// INCORPORATNG EVERYTHING INCLUDING PID, THIS WILL PROBABLY BE FINAL CODE (AFTER TESTING)
+// INCORPORATNG EVERYTHING INCLUDING PID, THIS IS FINAL CODE (HAS BEEN TESTED)
 
 // pin numbers for motors and wheel servos
 
@@ -21,14 +21,14 @@ float error;
 float previousError = 0;    
 float integral = 0;
 
-float baseSpeed = 190.0;  
+float baseSpeed = 180.0;  
 float leftSpeed;
 float rightSpeed;
 
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 160.0;
+float Kp = 200.0;
 float Kd = 10.0;    // constants used to calculate PID (still need to be adjusted) 
 float Ki = 0.5;
 
