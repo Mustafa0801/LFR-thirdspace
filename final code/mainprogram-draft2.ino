@@ -11,11 +11,12 @@
 
 // pin numbers for sensor array
 
-#define irL2 8   // left most
-#define irL1 9  // left of middle
-#define irM 10    // middle
-#define irR1 11    // right of middle
-#define irR2 12    // right most
+#define irL2 A0  // left most
+#define irL1 A1  // left of middle
+#define irM1 A2  // middle
+#define irM2 A3
+#define irR1 A4  // right of middle
+#define irR2 A5  // right most
 
 float error;
 float previousError = 0;    
@@ -42,12 +43,13 @@ void setup() {
 
   pinMode(irL2, INPUT);
   pinMode(irL1, INPUT);
-  pinMode(irM, INPUT);
+  pinMode(irM1, INPUT);
+  pinMode(irM2, INPUT);
   pinMode(irR1, INPUT);
   pinMode(irR2, INPUT);
 
   lastTime = micros();
-  //Serial.begin(9600);
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -77,5 +79,5 @@ void loop() {
 
   Forward(leftSpeed, rightSpeed);  // the direction will be automatically changed by the varying left and right speeds
 
-  //Serial.println();   // going to next line
+  Serial.println();   // going to next line
 }
