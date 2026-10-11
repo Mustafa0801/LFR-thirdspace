@@ -1,5 +1,5 @@
-# LFR-thirdspace
-Line following robot project for HackClub YSWS thirdspace, uses 2 motors and an array of 5 sensors
+
+# Line following robot project for HackClub YSWS thirdspace, uses 2 motors and an array of 5 sensors, powered by 2 Li-ion batteries
 
 PLEASE NOTE: THE PLAYABLES FOR WEEK 1 AND 2 WERE BUGGED SO I HAVE FIXED THEM NOW, THE LINKS IN THE SUBMISSION DONT WORK SO PLEASE FIND THE DEMOS FOR WEEK 1 AND 2 IN THE PLAYABLES FOLDER
 
@@ -18,3 +18,8 @@ However it is probably issue with the hardware rather than the code.
 
 ## WEEK 3
 Hoped to finish the project this week but once again faced some technical difficulties, did everything that we needed to do however some components seem to be faulty due to which the robot is unable to move. Unfortunately we will have to continue it to the next week. it's very disappointing but it feels there is nothing we can do to make it work.
+
+## WEEK 4
+We finally completed the project this week, once again faced issues getting materials like the soldering iron and the batteries which caused things to be done at the last minute. I did think it would be difficult to get 10 hrs this week but we ended up facing so many issues that it wasn't too much of a problem.  
+ \
+Aaand thats the end of this project, very happy with how smooth the line follower was and how the whole project turned out despite all the techincal difficulties and hurdles!! 
