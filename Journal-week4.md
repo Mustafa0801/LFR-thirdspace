@@ -1,4 +1,4 @@
-# Journal for week 4
+# Week 4 Hardware Journal
 
 ## Muhammad
 it took more than 5 hours diagnosing the power problem because the onboard 5v regulator was fully faulty on the l298n.
