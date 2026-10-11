@@ -11,11 +11,11 @@
 
 // pin numbers for sensor array
 
-#define irL2 12  // left most
-#define irL1 11  // left of middle
+#define irL2 8  // left most
+#define irL1 9  // left of middle
 #define irM 10  // middle
-#define irR1 9  // right of middle
-#define irR2 8  // right most
+#define irR1 11  // right of middle
+#define irR2 12  // right most
 
 float error;
 float previousError = 0;    
