@@ -13,6 +13,10 @@ float ReadSensors(){
     return previousError;
   }
 
+  if ((_readingL2 + _readingL1 + _readingR1 + _readingR2)==0 && _readingM==1){  // prevents robot from choosing wrong route
+    return 0;
+  }
+
   // weighted position algorithm to calculate error
 
   float _currentPosition = float(_readingL2*0 + _readingL1*1 + _readingM*2 + _readingR1*3 + _readingR2*4) / (_readingL2 + _readingL1 + _readingM + _readingR1 + _readingR2);
