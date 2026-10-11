@@ -47,7 +47,7 @@ void setup() {
   pinMode(irR2, INPUT);
 
   lastTime = micros();
-  Serial.begin(9600);
+  //Serial.begin(9600);
 }
 
 void loop() {
@@ -73,9 +73,9 @@ void loop() {
 
   leftSpeed = round(leftSpeed);     // converting speeds from float to int since the movement functions need integer value for speed
   rightSpeed = round(rightSpeed);
-  Serial.print(" | left speed: "+String(leftSpeed)+" right speed: "+String(rightSpeed));
+  //Serial.print(" | left speed: "+String(leftSpeed)+" right speed: "+String(rightSpeed));
 
   Forward(leftSpeed, rightSpeed);  // the direction will be automatically changed by the varying left and right speeds
 
-  Serial.println();   // going to next line
+  //Serial.println();   // going to next line
 }
