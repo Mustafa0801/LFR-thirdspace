@@ -34,6 +34,6 @@ float CalculatePID(float _error){
       integral = integral - (_error * deltaTime);  // prevents integral from further accumulating
     }
   }
-  Serial.print(" | PID output: "+String(_output));
+  
   return _output;
 }
