@@ -21,15 +21,15 @@ float error;
 float previousError = 0;    
 float integral = 0;
 
-float baseSpeed = 170.0;  
+float baseSpeed = 150.0;  
 float leftSpeed;
 float rightSpeed;
 
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 120.0;
-float Ki = 2.0;    // constants used to calculate PID (still need to be adjusted) 
+float Kp = 300.0;
+float Ki = 1.0;    // constants used to calculate PID (still need to be adjusted) 
 float Kd = 0;
 
 void setup() {
