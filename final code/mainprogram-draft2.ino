@@ -25,10 +25,13 @@ float baseSpeed = 170.0;
 float leftSpeed;
 float rightSpeed;
 
+bool leftReverse = false;
+bool rightReverse = false;
+
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 100.0;
+float Kp = 120.0;
 float Kd = 15.0;    // constants used to calculate PID (still need to be adjusted) 
 float Ki = 0.5;
 
@@ -59,16 +62,27 @@ void loop() {
 
   // maximum and minimum thresholds for speed, since we can only analogWrite values between 0-255 inclusive
   if (leftSpeed > 255.0){
+    leftReverse = false;
     leftSpeed = 255.0;
   }
-  else if (leftSpeed < 0){
-    leftSpeed = 0;
+  else if (leftSpeed >= 0){
+    leftReverse = false;
   }
+  else if (leftSpeed < 0){
+    leftReverse = true;
+    leftSpeed = abs(leftSpeed);
+  }
+  
   if (rightSpeed > 255.0){
+    rightReverse = false;
     rightSpeed = 255.0;
   }
+  else if (rightSpeed >= 0){
+    rightReverse = false;
+  }
   else if (rightSpeed < 0){
-    rightSpeed = 0;
+    rightReverse = true;
+    rightSpeed = abs(rightSpeed);
   }
 
   leftSpeed = round(leftSpeed);     // converting speeds from float to int since the movement functions need integer value for speed
