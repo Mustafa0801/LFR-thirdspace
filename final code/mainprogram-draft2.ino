@@ -29,7 +29,7 @@ unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
 float Kp = 20.0;
-float Ki = 0.5;    // constants used to calculate PID (still need to be adjusted) 
+float Ki = 0;    // constants used to calculate PID (still need to be adjusted) 
 float Kd = 5.0;
 
 void setup() {
@@ -52,12 +52,12 @@ void setup() {
 
 void loop() {
   error = ReadSensors();
-  float outputPID = CalculatePID(error);
+  float PID_Output = CalculatePID(error);
 
   Serial.println();
 
-  leftSpeed = baseSpeed - outputPID;
-  rightSpeed = baseSpeed + outputPID;  // speed is adjusted according to PID to allow robot to move smoothly and accurately
+  leftSpeed = baseSpeed - PID_Output;
+  rightSpeed = baseSpeed + PID_Output;  // speed is adjusted according to PID to allow robot to move smoothly and accurately
 
   // maximum and minimum thresholds for speed, since we can only analogWrite values between 0-255 inclusive
   if (leftSpeed > 255.0){
