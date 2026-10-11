@@ -23,3 +23,5 @@ Hoped to finish the project this week but once again faced some technical diffic
 We finally completed the project this week, once again faced issues getting materials like the soldering iron and the batteries which caused things to be done at the last minute. I did think it would be difficult to get 10 hrs this week but we ended up facing so many issues that it wasn't too much of a problem.  
  \
 Aaand thats the end of this project, very happy with how smooth the line follower was and how the whole project turned out despite all the techincal difficulties and hurdles!! 
+
+<img width="600" height="800" alt="WhatsApp Image 2026-10-12 at 1 39 00 AM" src="https://github.com/user-attachments/assets/49f44cbf-368e-4882-aee6-2e59353a64a6" />
