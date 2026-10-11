@@ -13,8 +13,8 @@
 #define irR1 11
 #define irR2 12
 
-int leftSpeed = 120;  // placeholder values for speeds
-int rightSpeed = 120;
+int leftSpeed = 160;  // placeholder values for speeds
+int rightSpeed = 160;
 int linePos;
 
 void setup() {
