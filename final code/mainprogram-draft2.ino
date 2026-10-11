@@ -28,8 +28,8 @@ float rightSpeed;
 unsigned long currentTime;    // used to calculate delta time
 unsigned long lastTime;
 
-float Kp = 200.0;
-float Kd = 20.0;    // constants used to calculate PID (still need to be adjusted) 
+float Kp = 400.0;
+float Kd = 50.0;    // constants used to calculate PID (still need to be adjusted) 
 float Ki = 1.0;
 
 void setup() {
