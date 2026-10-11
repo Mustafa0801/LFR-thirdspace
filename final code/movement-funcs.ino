@@ -10,8 +10,6 @@ void Forward(int _leftSpeed, int _rightSpeed){
 
   analogWrite(leftMotor, _leftSpeed);
   analogWrite(rightMotor, _rightSpeed);
-
-  Serial.print(" | moving forward...");
 }
 
 void TurnRight(int _leftSpeed, int _rightSpeed){
