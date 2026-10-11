@@ -21,8 +21,6 @@ void TurnRight(int _leftSpeed, int _rightSpeed){
 
   analogWrite(leftMotor, _leftSpeed);
   analogWrite(rightMotor, _rightSpeed);
-
-  Serial.print(" | turning right...");
 }
 
 void TurnLeft(int _leftSpeed, int _rightSpeed){
@@ -34,6 +32,4 @@ void TurnLeft(int _leftSpeed, int _rightSpeed){
 
   analogWrite(leftMotor, _leftSpeed);
   analogWrite(rightMotor, _rightSpeed);
-
-  Serial.print(" | turning left...");
 }
